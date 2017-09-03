@@ -16,11 +16,13 @@ public class AudioPeer : MonoBehaviour
 
     public static float amplitude, amplitudeBuffer;
     float amplitudeHighest = 0;
+    public float audioProfile;
 
     // Use this for initialization
     void Start ()
 	{
 		audioSource = GetComponent<AudioSource>();
+        AudioProfile();
 	}
 	
 	// Update is called once per frame
@@ -32,6 +34,14 @@ public class AudioPeer : MonoBehaviour
         CreateAudioBands();
         GetAmplitude();
 	}
+
+    void AudioProfile()
+    {
+        for(int i = 0; i < frequencyBandHighest.Length; i++)
+        {
+            frequencyBandHighest[i] = audioProfile;
+        }
+    }
 
     void GetAmplitude()
     {
