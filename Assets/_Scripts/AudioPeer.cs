@@ -6,8 +6,8 @@ public class AudioPeer : MonoBehaviour
 {
 	AudioSource audioSource;
 
-    private float[] samplesLeft = new float[512];
-    private float[] samplesRight = new float[512];
+    public static float[] samplesLeft = new float[512];
+    public static float[] samplesRight = new float[512];
 
     private float[] frequencyBand = new float[8];
     private float[] bandBuffer = new float[8];
@@ -22,16 +22,16 @@ public class AudioPeer : MonoBehaviour
 
 
     [HideInInspector]
-    public float[] audioBand, audioBandBuffer;
+    public static float[] audioBand, audioBandBuffer;
 
     [HideInInspector]
-    public float[] audioBand64, audioBandBuffer64;
+    public static float[] audioBand64, audioBandBuffer64;
 
-    public float amplitude, amplitudeBuffer;
+    public static float amplitude, amplitudeBuffer;
 
     [HideInInspector]
-    public float amplitudeHighest = 0;
-    public float audioProfile;
+    public static float amplitudeHighest = 0;
+    public static float audioProfile;
 
     public enum channel {Stereo, Left, Right};
     public channel _channel = new channel();
