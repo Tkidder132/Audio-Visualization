@@ -30,7 +30,7 @@ public class InstatiateSamples : MonoBehaviour
         {
             if(sampleCubes[i])
             {
-                sampleCubes[i].transform.localScale = new Vector3(10, (AudioPeer.samples[i] * maxScale) + 2, 10);
+                sampleCubes[i].transform.localScale = new Vector3(10, (AudioPeer.samplesLeft[i] * maxScale) + 2, 10);
             }
         }
 	}
