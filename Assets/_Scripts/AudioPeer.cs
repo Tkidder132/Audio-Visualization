@@ -231,7 +231,7 @@ public class AudioPeer : MonoBehaviour
             if (increases.Contains(i))
             {
                 power++;
-                sampleCount = (int)Mathf.Pow(2, power) * 2;
+                sampleCount = (int)Mathf.Pow(2, power);
                 if( power == 3 )
                 {
                     sampleCount -= 2;
@@ -256,7 +256,7 @@ public class AudioPeer : MonoBehaviour
             }
             average /= count;
 
-            frequencyBand64[i] = average * 8;
+            frequencyBand64[i] = average * 80;
         }
     }
 }
